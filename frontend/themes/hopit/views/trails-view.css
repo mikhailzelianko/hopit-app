@@ -1,0 +1,8 @@
+.trails-view {
+  display: flex;
+  height: 100%;
+}
+
+.trails-view .map {
+  flex: 1;
+}
