@@ -30,4 +30,19 @@ export class LeafletMap extends LitElement {
     await this.updateComplete; // Make sure map has been initialized
     this.map.setView([latitude, longitude], zoomLevel);
   }
+
+  async addMarker(latitude: number, longitude: number) {
+    await this.updateComplete; // Make sure map has been initialized
+
+    var greenIcon = L.icon({
+      iconUrl: 'https://toppng.com/uploads/preview/map-point-google-map-marker-gif-11562858751s4qufnxuml.png',
+      shadowUrl: 'leaf-shadow.png',
+
+      iconSize:     [38, 95] // size of the icon
+    });
+
+    L.marker([latitude, longitude], {
+      icon: greenIcon
+    }).addTo(this.map);
+  }
 }

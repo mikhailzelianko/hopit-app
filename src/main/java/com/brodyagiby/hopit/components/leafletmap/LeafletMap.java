@@ -15,4 +15,11 @@ public class LeafletMap extends Component implements HasSize {
         getElement().callJsFunction("setView", latitude, longitude, zoomLevel);
     }
 
+    public void addMarker(double latitude, double longitude) {
+        getElement().callJsFunction("addMarker", latitude, longitude);
+    }
+
+
+
+
 }
